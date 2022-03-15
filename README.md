@@ -1,10 +1,8 @@
-# sqs-consumer
+# sqs-consumer2
+
+based off the original package (which hopefully will become unstale and can be overwriten again)
 
 [![NPM downloads](https://img.shields.io/npm/dm/sqs-consumer.svg?style=flat)](https://npmjs.org/package/sqs-consumer)
-[![Build Status](https://travis-ci.org/bbc/sqs-consumer.svg)](https://travis-ci.org/bbc/sqs-consumer) 
-[![Code Climate](https://codeclimate.com/github/BBC/sqs-consumer/badges/gpa.svg)](https://codeclimate.com/github/BBC/sqs-consumer) 
-[![Test Coverage](https://codeclimate.com/github/BBC/sqs-consumer/badges/coverage.svg)](https://codeclimate.com/github/BBC/sqs-consumer)
-
 Build SQS-based applications without the boilerplate. Just define an async function that handles the SQS message processing.
 
 ## Installation
@@ -16,7 +14,7 @@ npm install sqs-consumer --save
 ## Usage
 
 ```js
-const { Consumer } = require('sqs-consumer');
+const { Consumer } = require('sqs-consumer-2');
 
 const app = Consumer.create({
   queueUrl: 'https://sqs.eu-west-1.amazonaws.com/account-id/queue-name',
