@@ -92,7 +92,7 @@ export interface ConsumerOptions {
   handleMessageBatch?(messages: SQSMessage[]): Promise<void>;
 }
 
-interface Events {
+export interface Events {
   'response_processed': [];
   'empty': [];
   'message_received': [SQSMessage];
