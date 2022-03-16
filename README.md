@@ -1,8 +1,8 @@
-# sqs-consumer2
+# sqs-consumer-2
 
-based off the original package (which hopefully will become unstale and can be overwriten again)
+based off the original excellent package https://npmjs.org/package/sqs-consumer (which hopefully will become unstale and can be overwriten again)
 
-[![NPM downloads](https://img.shields.io/npm/dm/sqs-consumer.svg?style=flat)](https://npmjs.org/package/sqs-consumer)
+[![NPM downloads](https://img.shields.io/npm/dm/sqs-consumer.svg?style=flat)](https://npmjs.org/package/sqs-consumer-2)
 Build SQS-based applications without the boilerplate. Just define an async function that handles the SQS message processing.
 
 ## Installation
@@ -81,7 +81,7 @@ If you need to specify your credentials manually, you can use a pre-configured i
 
 
 ```js
-const { Consumer } = require('sqs-consumer');
+const { Consumer } = require('sqs-consumer-2');
 const AWS = require('aws-sdk');
 
 AWS.config.update({
