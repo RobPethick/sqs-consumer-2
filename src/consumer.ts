@@ -100,6 +100,7 @@ interface Events {
   'error': [Error, void | SQSMessage | SQSMessage[]];
   'timeout_error': [Error, SQSMessage];
   'processing_error': [Error, SQSMessage];
+  'visibility_timeout_error': [Error, SQSMessage];
   'stopped': [];
 }
 
@@ -231,7 +232,7 @@ export class Consumer extends EventEmitter {
     }
   }
 
-  private async deleteMessage(message: SQSMessage): Promise<void> {
+  public async deleteMessage(message: SQSMessage): Promise<void> {
     debug('Deleting message %s', message.MessageId);
 
     const deleteParams = {
@@ -283,7 +284,7 @@ export class Consumer extends EventEmitter {
         })
         .promise();
     } catch (err) {
-      this.emit('error', err, message);
+      this.emit('visibility_timeout_error', err, message);
     }
   }
 
