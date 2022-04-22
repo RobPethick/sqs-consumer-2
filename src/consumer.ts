@@ -154,7 +154,7 @@ export class Consumer extends EventEmitter {
     this.authenticationErrorTimeout =
       options.authenticationErrorTimeout || 10000;
     this.pollingWaitTimeMs = options.pollingWaitTimeMs || 0;
-    this.deleteMessageOnCompletion = options.deleteMessageOnCompletion || true;
+    this.deleteMessageOnCompletion = options.deleteMessageOnCompletion ?? true;
 
     this.sqs =
       options.sqs ||
